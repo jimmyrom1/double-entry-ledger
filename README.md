@@ -174,9 +174,10 @@ Forma parte de una serie de proyectos con el mismo enfoque: reglas de negocio ga
 por la base de datos o por funciones puras, tests que prueban los casos difíciles y CI en cada push.
 
 | Proyecto | Qué es |
+| --- | --- |
+| [Subscription Billing .NET](https://github.com/jimmyrom1/subscription-billing-dotnet) | .NET 9 + C# + EF Core + SQLite: motor de facturación recurrente con prorrateo exacto al segundo, dunning de 3 intentos e idempotencia HTTP. |
 | [Live Auction Engine](https://github.com/jimmyrom1/live-auction-engine) | Full-stack en Node.js 24 + WebSockets + SQLite WAL + React 19: subastas en tiempo real con resolución atómica de carreras concurrentes y anti-sniping. |
 | [Rate Limiter & Circuit Breaker gRPC](https://github.com/jimmyrom1/rate-limiter-grpc) | Microservicio en Go + gRPC + Protocol Buffers: control de tráfico (~90 ns/op) con Token Bucket, Sliding Window, Leaky Bucket y Circuit Breaker. |
-
 | [Subscriptions API](https://github.com/jimmyrom1/subscriptions-api) | API REST con Java 21 y Spring Boot 4: prorrateo, facturación idempotente, ShedLock, Flyway y Testcontainers. |
 | [Reserva de salas](https://github.com/jimmyrom1/room-booking) | Flask + PostgreSQL + React: reservas sin solapes garantizadas por un `EXCLUDE` de PostgreSQL, JWT y exportación a calendario. |
 | [Mini Facturas](https://github.com/jimmyrom1/mini-invoice-generator) | Flask + PostgreSQL + React: IVA por línea con desglose, retención de IRPF, numeración correlativa atómica y exportación a PDF. |
