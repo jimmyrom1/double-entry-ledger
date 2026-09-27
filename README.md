@@ -182,6 +182,7 @@ por la base de datos o por funciones puras, tests que prueban los casos difícil
 | [Mini Facturas](https://github.com/jimmyrom1/mini-invoice-generator) | Flask + PostgreSQL + React: IVA por línea con desglose, retención de IRPF, numeración correlativa atómica y exportación a PDF. |
 | [LoL Tracker API](https://github.com/jimmyrom1/lol-tracker-api) | Backend en Node.js 24 + TypeScript + Fastify: proxy de la API de Riot con caché compartida en PostgreSQL, límite de peticiones y la key solo en el servidor. |
 | [LoL Tracker](https://github.com/jimmyrom1/lol-tracker) | App Android nativa: Kotlin, Jetpack Compose, Room, Hilt, multimódulo e importación de partidas desde la API de Riot. |
+| [Anime Tracker](https://github.com/jimmyrom1/anime-tracker) | ASP.NET Core 10 + EF Core + PostgreSQL + Angular 22: lista de anime y manga al estilo MyAnimeList con catálogo de AniList, "+1" sin perder episodios y estadísticas. |
 
 
 ## Licencia
