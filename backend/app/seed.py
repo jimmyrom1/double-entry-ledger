@@ -4,6 +4,7 @@ from decimal import Decimal
 import asyncpg
 
 from app.config import settings
+from app.db import init_schema
 from app.models import (
     AccountCreate,
     AccountType,
@@ -213,9 +214,17 @@ async def seed_data(pool: asyncpg.Pool) -> None:
 
 
 async def main():
-    pool = await asyncpg.create_pool(dsn=settings.DATABASE_URL)
-    await seed_data(pool)
-    await pool.close()
+    for attempt in range(1, 16):
+        try:
+            pool = await asyncpg.create_pool(dsn=settings.DATABASE_URL)
+            await init_schema(pool)
+            await seed_data(pool)
+            await pool.close()
+            return
+        except Exception as e:
+            print(f"Esperando a que la base de datos esté lista (intento {attempt}/15): {e}")
+            await asyncio.sleep(2)
+    raise RuntimeError("No se pudo conectar a la base de datos tras 15 intentos.")
 
 
 if __name__ == "__main__":
